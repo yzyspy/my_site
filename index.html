@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+     <link rel="stylesheet" href="css/style.css">
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 加载 header.html 内容到占位容器
+            $("#header-placeholder").load("header.html");
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- 页眉：网站标题和导航 -->
+        <div id="header-placeholder"></div>
+
+       <article>
+            <h2>这是一篇示例文章</h2>
+            <p><small>发布于 2025-03-24 · 标签： #示例</small></p>
+            <p>欢迎来到我的个人博客！你可以在这里发布自己的技术笔记、生活随想或任何想要分享的内容。</p>
+            <p>下面是一个代码块示例（支持高亮）：</p>
+            <pre><code>console.log("Hello, world!");</code></pre>
+            <p>你也可以插入图片、表格或任何 HTML 元素。这个页面已经预设了最基本的样式，让你的内容清晰可读。</p>
+        </article>
+        <!-- 页脚 -->
+        <footer>
+            &copy; 2025 我的博客 · 由 Markdown 生成
+        </footer>
+    </div>
+</body>
+</html>
+

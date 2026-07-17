@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+     <link rel="stylesheet" href="../../css/style.css">
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 加载 header.html 内容到占位容器
+            $("#header-placeholder").load("../../header.html");
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- 页眉：网站标题和导航 -->
+        <div id="header-placeholder"></div>
+        这里是golang文章列表
+        <!-- 页脚 -->
+        <footer>
+            &copy; 2025 我的博客 · 由 Markdown 生成
+        </footer>
+    </div>
+</body>
+</html>
+

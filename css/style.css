@@ -1,0 +1,86 @@
+ /* 全局重置与字体 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fafafa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        nav a {
+            color: #0366d6;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        article {
+            margin-bottom: 30px;
+        }
+        article h2 {
+            font-size: 1.8rem;
+            margin: 20px 0 10px;
+        }
+        article p {
+            margin: 10px 0;
+        }
+        article code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        article pre {
+            background: #f6f8fa;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+        /* 对图片和表格等的基本支持 */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background: #f6f8fa;
+        }
