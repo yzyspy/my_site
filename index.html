@@ -12,6 +12,10 @@
             // 加载 header.html 内容到占位容器
             $("#header-placeholder").load("header.html");
         });
+        $(function(){
+            //使用绝对路径 加载 footer.html 内容到占位容器
+            $("#footer-placeholder").load("/footer.html");
+        });
     </script>
 </head>
 <body>
@@ -28,9 +32,7 @@
             <p>你也可以插入图片、表格或任何 HTML 元素。这个页面已经预设了最基本的样式，让你的内容清晰可读。</p>
         </article>
         <!-- 页脚 -->
-        <footer>
-            &copy; 2025 我的博客 · 由 Markdown 生成
-        </footer>
+        <div id="footer-placeholder"></div>
     </div>
 </body>
 </html>
