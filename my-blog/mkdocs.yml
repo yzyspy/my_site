@@ -1,0 +1,68 @@
+# 站点基础信息
+site_name: 我的文档
+site_url: https://yangzhongyu.site/   # 换成你的域名；如果有子路径要写成 https://yourdomain.com/docs/
+site_description: 项目文档
+site_author: Your Name
+copyright: Copyright &copy; 2026 Your Name
+
+# 仓库信息，用于页面右上角仓库链接和“编辑此页”
+repo_url: https://github.com/your-username/your-repo
+repo_name: your-username/your-repo
+edit_uri: edit/main/docs/   # 根据你的分支和文档目录调整
+
+# 主题配置
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+# 导航结构，按你的实际文档修改
+nav:
+  - 首页: index.md
+  - 指南:
+      - 快速开始: guide/getting-started.md
+      - 配置说明: guide/configuration.md
+  - 关于: about.md
+
+# Markdown 扩展
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+# 插件
+plugins:
+  - search
+
+# 其他
+extra:
+  generator: false
