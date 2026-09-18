@@ -8,4 +8,12 @@
          <loc>https://yangzhongyu.site/about/</loc>
          <lastmod>2026-09-18</lastmod>
     </url>
+    <url>
+         <loc>https://yangzhongyu.site/agent-development/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://yangzhongyu.site/agent-development/uv-langgraph-cli/</loc>
+         <lastmod>2026-09-18</lastmod>
+    </url>
 </urlset>

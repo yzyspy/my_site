@@ -1,57 +1,62 @@
-# 站点基础信息
-site_name: 我的文档
-site_url: https://yangzhongyu.site/   # 换成你的域名；如果有子路径要写成 https://yourdomain.com/docs/
-site_description: 项目文档
-site_author: Your Name
-copyright: Copyright &copy; 2026 Your Name
+site_name: 字节与智能
+site_url: https://yangzhongyu.site/
+site_description: 聚焦 Agent 开发、工程实践与 AI 原生应用的技术分享。
+site_author: Yang Zhongyu
+copyright: Copyright &copy; 2026 Yang Zhongyu
 
-# 仓库信息，用于页面右上角仓库链接和“编辑此页”
-repo_url: https://github.com/your-username/your-repo
-repo_name: your-username/your-repo
-edit_uri: edit/main/docs/   # 根据你的分支和文档目录调整
+repo_url: https://github.com/yzyspy/my_site
+repo_name: yzyspy/my_site
+edit_uri: edit/main/docs/
 
-# 主题配置
 theme:
   name: material
   language: zh
   palette:
-    - scheme: default
-      primary: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
       accent: indigo
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-night
         name: 切换到深色模式
-    - scheme: slate
-      primary: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
       accent: indigo
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: 切换到浅色模式
   features:
+    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.footer
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.code.annotate
+    - toc.follow
   icon:
     repo: fontawesome/brands/github
 
-# 导航结构，按你的实际文档修改
 nav:
   - 首页: index.md
-  - 指南:
-      - 快速开始: guide/getting-started.md
-      - 配置说明: guide/configuration.md
+  - Agent 开发:
+      - 分类首页: agent-development/index.md
+      - UV + LangGraph CLI 入门: agent-development/uv-langgraph-cli.md
   - 关于: about.md
 
-# Markdown 扩展
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.tabbed:
@@ -59,10 +64,19 @@ markdown_extensions:
   - toc:
       permalink: true
 
-# 插件
 plugins:
-  - search
+  - search:
+      lang:
+        - zh
+        - en
 
-# 其他
+extra_css:
+  - assets/stylesheets/extra.css
+
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yzyspy
+      name: GitHub
+

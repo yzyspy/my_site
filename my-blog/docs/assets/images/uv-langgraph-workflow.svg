@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">UV 与 LangGraph CLI 开发流程</title>
+  <desc id="desc">从 UV 初始化和锁定依赖，到 LangGraph 状态图，再到本地开发服务器和 Studio 调试。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#11141b"/><stop offset="1" stop-color="#1b2030"/></linearGradient>
+    <linearGradient id="accent" x1="0" x2="1"><stop offset="0" stop-color="#73e3ff"/><stop offset="1" stop-color="#8b7cff"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <g fill="none" stroke="#31394d" stroke-width="1" opacity=".45"><path d="M0 105h1200M0 210h1200M0 315h1200"/><path d="M150 0v420M300 0v420M450 0v420M600 0v420M750 0v420M900 0v420M1050 0v420"/></g>
+  <g stroke="url(#accent)" stroke-width="4" fill="none" filter="url(#glow)"><path d="M310 210h105"/><path d="M760 210h105"/></g>
+  <g fill="#79dbff"><path d="m412 199 18 11-18 11z"/><path d="m862 199 18 11-18 11z"/></g>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC',sans-serif">
+    <g><rect x="70" y="110" width="240" height="200" rx="24" fill="#181e29" stroke="#3c465e"/><circle cx="105" cy="145" r="7" fill="#73e3ff"/><text x="100" y="207" fill="#f4f7ff" font-size="30" font-weight="700">UV</text><text x="100" y="245" fill="#9ba8bf" font-size="19">环境 · 依赖 · 锁文件</text><text x="100" y="276" fill="#65718a" font-size="16">uv init / uv add / uv run</text></g>
+    <g><rect x="430" y="70" width="330" height="280" rx="24" fill="#181e29" stroke="#526084"/><text x="465" y="116" fill="#f4f7ff" font-size="25" font-weight="700">LangGraph</text><text x="465" y="145" fill="#9ba8bf" font-size="17">状态与执行路径</text><g stroke-width="3" fill="none"><path d="M510 230h70M615 230h65" stroke="#6bcbe8"/><path d="m572 220 16 10-16 10M672 220l16 10-16 10" fill="#6bcbe8"/></g><circle cx="490" cy="230" r="25" fill="#243848" stroke="#73e3ff"/><circle cx="595" cy="230" r="32" fill="#2c2b4d" stroke="#8b7cff"/><circle cx="700" cy="230" r="25" fill="#243848" stroke="#73e3ff"/><text x="480" y="236" fill="#d9f8ff" font-size="16">始</text><text x="579" y="236" fill="#edeaff" font-size="16">节点</text><text x="690" y="236" fill="#d9f8ff" font-size="16">终</text><text x="465" y="318" fill="#65718a" font-size="16">START → node → END</text></g>
+    <g><rect x="880" y="110" width="250" height="200" rx="24" fill="#181e29" stroke="#3c465e"/><circle cx="915" cy="145" r="7" fill="#8b7cff"/><text x="910" y="203" fill="#f4f7ff" font-size="27" font-weight="700">CLI + Studio</text><text x="910" y="242" fill="#9ba8bf" font-size="19">服务 · 热重载 · 调试</text><text x="910" y="276" fill="#65718a" font-size="16">localhost:2024</text></g>
+  </g>
+</svg>

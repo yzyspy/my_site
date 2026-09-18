@@ -12,11 +12,13 @@
         <meta name="author" content="Yang Zhongyu">
       
       
-        <link rel="canonical" href="https://yangzhongyu.site/about/">
+        <link rel="canonical" href="https://yangzhongyu.site/agent-development/">
       
       
-        <link rel="prev" href="../agent-development/uv-langgraph-cli/">
+        <link rel="prev" href="..">
       
+      
+        <link rel="next" href="uv-langgraph-cli/">
       
       
         
@@ -27,7 +29,7 @@
     
     
       
-        <title>关于 - 字节与智能</title>
+        <title>分类首页 - 字节与智能</title>
       
     
     
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#agent" class="md-skip">
           跳转至
         </a>
       
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              关于
+              分类首页
             
           </span>
         </div>
@@ -244,11 +246,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../agent-development/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -264,11 +268,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../about/" class="md-tabs__link">
         
   
   
@@ -357,26 +359,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -394,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -409,10 +416,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../agent-development/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -428,6 +444,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -440,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../agent-development/uv-langgraph-cli/" class="md-nav__link">
+      <a href="uv-langgraph-cli/" class="md-nav__link">
         
   
   
@@ -472,19 +489,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
         
   
   
@@ -500,7 +508,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -543,10 +550,19 @@
   
 
 
-<h1 id="_1">关于本站<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>这里是 <strong>字节与智能</strong>，一个面向开发者的技术分享站点。</p>
-<p>我关注 Agent 工程、开发工具与 AI 原生应用，文章尽量做到三件事：说明问题为什么存在、给出可以运行的示例、留下继续深入的路径。</p>
-<p>如果文章对你有帮助，欢迎通过 <a href="https://github.com/yzyspy">GitHub</a> 交流。</p>
+<h1 id="agent">Agent 开发<a class="headerlink" href="#agent" title="Permanent link">&para;</a></h1>
+<p class="category-intro">从状态图、工具调用到本地调试与生产部署，记录构建可靠 Agent 的方法与实践。</p>
+
+<div class="article-list">
+  <a class="article-list__item" href="uv-langgraph-cli/">
+    <div>
+      <span class="article-meta">2026-09-18 · 入门</span>
+      <h2>UV + LangGraph CLI 入门</h2>
+      <p>用 UV 管理依赖，用 LangGraph CLI 启动支持热重载的本地 Agent Server。</p>
+    </div>
+    <span class="article-list__arrow">↗</span>
+  </a>
+</div>
 
 
 
@@ -582,7 +598,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../agent-development/uv-langgraph-cli/" class="md-footer__link md-footer__link--prev" aria-label="上一页: UV + LangGraph CLI 入门">
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="上一页: 首页">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -592,11 +608,27 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                UV + LangGraph CLI 入门
+                首页
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="uv-langgraph-cli/" class="md-footer__link md-footer__link--next" aria-label="下一页: UV + LangGraph CLI 入门">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                UV + LangGraph CLI 入门
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
