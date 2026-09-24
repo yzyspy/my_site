@@ -11,4 +11,12 @@
     </div>
     <span class="article-list__arrow">↗</span>
   </a>
+  <a class="article-list__item" href="langraph_sdk/">
+    <div>
+      <span class="article-meta">2026-09-24 · 入门</span>
+      <h2>langgraph-sdk-js在网页端调用langgraph服务</h2>
+      <p>langgraph-sdk-js在网页端调用langgraph服务</p>
+    </div>
+    <span class="article-list__arrow">↗</span>
+  </a>
 </div>
