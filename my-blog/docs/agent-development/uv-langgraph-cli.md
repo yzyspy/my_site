@@ -1,6 +1,11 @@
 ---
 title: UV + LangGraph CLI 入门
-description: 使用 UV 管理 Python 环境与依赖，并通过 LangGraph CLI 在本地启动、调试一个最小 Agent 图。
+date: '2026-09-18'
+description: 使用 UV 管理 Python 环境与依赖，通过 LangGraph CLI 启动支持热重载的本地 Agent Server。
+tags:
+- LangGraph
+- Python
+- UV
 ---
 
 <p class="article-kicker">AGENT 开发 · 入门</p>

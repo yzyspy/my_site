@@ -1,0 +1,47 @@
+{% extends "main.html" %}
+{% block content %}
+{% set categories = nav.items[1].children %}
+{% set posts = namespace(items=[]) %}
+{% for category in categories %}{% for article in category.children %}{% if article.meta.date %}{% set posts.items = posts.items + [article] %}{% endif %}{% endfor %}{% endfor %}
+{% set articles = posts.items %}
+{% set tags = namespace(items=[]) %}
+{% for article in articles %}{% for tag in article.meta.tags %}{% if tag not in tags.items %}{% set tags.items = tags.items + [tag] %}{% endif %}{% endfor %}{% endfor %}
+<div class="home-page">
+  <section class="hero" aria-labelledby="welcome-title">
+    <div class="hero-status"><span class="status-dot"></span> HELLO, WORLD! <span class="hero-version">~/yangzhongyu/blog</span></div>
+    <h1 id="welcome-title"><span class="hero-slashes" aria-hidden="true">//</span> 欢迎来到我的代码世界<span class="cursor" aria-hidden="true">_</span></h1>
+    <p class="hero-command"><span>$</span> echo <span class="command-string">"分享技术 · 探索智能 · 持续构建"</span></p>
+    <p class="hero-description">我是 Yang Zhongyu，在这里记录 Agent 开发、工程实践与 AI 原生应用。</p>
+    <div class="hero-actions">
+      <a class="terminal-button terminal-button--primary" href="#latest"><span aria-hidden="true">&gt;_</span> 查看文章 <span aria-hidden="true">↓</span></a>
+      <a class="terminal-button" href="{{ 'about/' | url }}"><span aria-hidden="true">&lt;/&gt;</span> 关于我</a>
+    </div>
+    <div class="hero-bottom"><span><span class="status-dot"></span> 持续学习，保持好奇</span><span>CODE / LEARN / SHARE</span></div>
+  </section>
+  <div class="home-layout">
+    <section class="latest-section" id="latest" aria-labelledby="latest-title">
+      <div class="section-heading"><h2 id="latest-title"><span aria-hidden="true">&gt;</span> 最新文章<span class="heading-note">LATEST POSTS</span></h2><a href="#blog-categories">浏览专栏 <span aria-hidden="true">↗</span></a></div>
+      <div class="article-grid">
+        {% for article in articles | sort(attribute='meta.date', reverse=true) %}
+        <article class="article-card">
+          <div class="article-card__top"><span class="article-number">{{ '%02d' | format(loop.index) }} / ARTICLE</span><span aria-hidden="true">↗</span></div>
+          <h3><a href="{{ article.url | url }}">{{ article.title }}</a></h3>
+          <div class="article-meta"><time datetime="{{ article.meta.date }}">{{ article.meta.date }}</time><span> / </span><a href="{{ article.parent.children[0].url | url }}">{{ article.parent.title }}</a></div>
+          <p>{{ article.meta.description }}</p>
+          <div class="article-card__footer"><div class="tag-list">{% for tag in article.meta.tags %}<a href="{{ article.parent.children[0].url | url }}#{{ tag | lower }}">{{ tag }}</a>{% endfor %}</div><a class="article-link" href="{{ article.url | url }}" aria-label="阅读：{{ article.title }}">阅读全文 <span aria-hidden="true">→</span></a></div>
+        </article>
+        {% endfor %}
+        <a class="explore-card" href="{{ 'agent-development/' | url }}"><span class="explore-symbol" aria-hidden="true">{ ... }</span><h3>从一个想法，到一次实践。</h3><p>整理踩过的坑，分享跑通的代码。<br>让每一次探索，都留下可复用的经验。</p><span class="article-link">探索技术专栏 <span aria-hidden="true">→</span></span></a>
+      </div>
+      <div class="list-end"><span></span><p>&gt; 持续记录，持续更新<span aria-hidden="true">_</span></p><span></span></div>
+    </section>
+    <aside class="blog-sidebar" aria-label="博客信息">
+      <section class="sidebar-panel stats-panel"><h2><span aria-hidden="true">▥</span> 网站统计</h2><div class="site-stats"><div><strong>{{ articles | length }}</strong><span>篇文章</span></div><div><strong>{{ categories | length }}</strong><span>个分类</span></div><div><strong>{{ tags.items | length }}</strong><span>个标签</span></div></div></section>
+      <section class="sidebar-panel author-panel"><div class="author-heading"><span class="author-avatar" aria-hidden="true">YZ<span>·</span></span><div><h2>Yang Zhongyu</h2><p>开发者 / 技术探索者</p></div></div><p>关注智能体与工程实践。<br>用代码解决问题，用文字沉淀思考。</p><a class="sidebar-link" href="https://github.com/yzyspy"><span aria-hidden="true">⌘</span> 在 GitHub 上找到我 <span aria-hidden="true">↗</span></a></section>
+      <section class="sidebar-panel" id="blog-categories"><h2><span aria-hidden="true">▱</span> 文章分类</h2>{% for category in categories %}<a class="category-row" href="{{ category.children[0].url | url }}"><span>{{ category.title }}</span><span>{{ category.children | length - 1 }} <span aria-hidden="true">→</span></span></a>{% endfor %}</section>
+      <section class="sidebar-panel"><h2><span aria-hidden="true">#</span> 标签</h2><div class="tag-cloud">{% for tag in tags.items %}<a {% for article in articles if tag in article.meta.tags %}{% if loop.first %}href="{{ article.parent.children[0].url | url }}#{{ tag | lower }}"{% endif %}{% endfor %}>{{ tag }}</a>{% endfor %}</div></section>
+      <section class="sidebar-note"><span aria-hidden="true">&gt;_</span><p>技术的价值，<br>在于把想法变成现实。</p><span class="note-caption">KEEP BUILDING. KEEP SHARING.</span></section>
+    </aside>
+  </div>
+</div>
+{% endblock %}

@@ -11,24 +11,22 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: zh
+  custom_dir: overrides
+  font: false
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: slate
       primary: black
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: 切换到深色模式
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: indigo
+      accent: light green
       toggle:
         icon: material/weather-sunny
         name: 切换到浅色模式
+    - scheme: default
+      primary: white
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
   features:
-    - navigation.instant
-    - navigation.tabs
     - navigation.sections
     - navigation.top
     - navigation.footer
@@ -38,13 +36,20 @@ theme:
     - content.code.annotate
     - toc.follow
   icon:
+    logo: material/console-line
     repo: fontawesome/brands/github
 
 nav:
   - 首页: index.md
-  - Agent 开发:
-      - 分类首页: agent-development/index.md
-      - UV + LangGraph CLI 入门: agent-development/uv-langgraph-cli.md
+  - 技术专栏:
+      - 智能体开发:
+          - 分类首页: agent-development/index.md
+          - UV + LangGraph CLI 入门: agent-development/uv-langgraph-cli.md
+          - 网页端调用 LangGraph 服务: agent-development/langraph_sdk.md
+          - RAG 知识库问答实践: agent-development/rag.md
+      - TypeScript深入浅出:
+          - 分类首页: typescript/index.md
+          - async 的使用: typescript/async-await.md
   - 关于: about.md
 
 markdown_extensions:
